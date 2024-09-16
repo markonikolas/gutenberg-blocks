@@ -20,6 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use FunkyHeadline\Plugin;
+use FunkyHeadline\Block\BlockLoader;
 
-( new Plugin() )->init();
+define( 'BLOCK_DIR_PATH', plugin_dir_path( __FILE__ ) . 'build' );
+
+new BlockLoader();
