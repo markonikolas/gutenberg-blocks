@@ -36,14 +36,14 @@ class BlockLoader {
 	 * @return void
 	 */
 	public function find_blocks(): void {
-		$block_dirs = array_diff( scandir( BLOCK_DIR_PATH . '/blocks/' ), ['.', '..']);
+		$block_dirs = array_diff( scandir( BLOCK_DIR_PATH . '/blocks/' ), [ '.', '..' ] );
 
 		if ( empty( $block_dirs ) ) {
 			return;
 		}
 
 		foreach ( $block_dirs as $value ) {
-			$directory = BLOCK_DIR_PATH . '/blocks/' .$value;
+			$directory = BLOCK_DIR_PATH . '/blocks/' . $value;
 
 			if ( file_exists( $directory ) ) {
 				$this->blocks[] = $directory;
