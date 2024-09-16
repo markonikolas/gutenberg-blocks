@@ -1,0 +1,12 @@
+{
+	"extends": [
+		"@wordpress/stylelint-config",
+		"stylelint-config-idiomatic-order"
+	],
+	"customSyntax": "postcss-scss",
+	"rules": {
+		"no-descending-specificity": null,
+		"no-duplicate-selectors": null,
+		"color-function-notation": null
+	}
+}

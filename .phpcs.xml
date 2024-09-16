@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<ruleset name="Funky Headline">
+
+	<file>.</file>
+
+	<exclude-pattern>*/.git/*</exclude-pattern>
+	<exclude-pattern>/build/*</exclude-pattern>
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>*.js</exclude-pattern>
+	<exclude-pattern>*.css</exclude-pattern>
+	<exclude-pattern>*.scss</exclude-pattern>
+
+	<arg value="sp"/>
+	<arg name="basepath" value="."/>
+	<arg name="colors"/>
+	<arg name="extensions" value="php"/>
+	<arg name="parallel" value="50"/>
+	<arg name="cache" value="./phpcs.cache"/>
+
+	<rule ref="WordPress-Extra">
+		<exclude name="WordPress.Files.FileName"/>
+		<exclude name="WordPress.NamingConventions.ValidVariableName"/>
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
+		<exclude name="WordPress.PHP.YodaConditions"/>
+	</rule>
+
+	<rule ref="WordPress-Docs"/>
+
+	<rule ref="WordPress-VIP-Go"/>
+
+	<rule ref="PSR1.Classes.ClassDeclaration"/>
+
+	<rule ref="WordPress.Arrays.MultipleStatementAlignment">
+		<properties>
+			<property name="alignMultilineItems" value="!=100"/>
+		</properties>
+	</rule>
+
+	<rule ref="PSR2.Methods.FunctionClosingBrace"/>
+
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+
+	<rule ref="Generic.ControlStructures.DisallowYodaConditions"/>
+
+	<rule ref="Generic.Commenting.Todo"/>
+
+	<rule ref="PHPCompatibility">
+		<exclude name="PHPCompatibility.PHP.NewConstants.t_finallyFound"/>
+		<exclude name="PHPCompatibility.PHP.NewConstants.t_yieldFound"/>
+		<exclude name="PHPCompatibility.PHP.NewConstants.t_ellipsisFound"/>
+		<exclude name="PHPCompatibility.PHP.NewConstants.t_powFound"/>
+		<exclude name="PHPCompatibility.PHP.NewConstants.t_pow_equalFound"/>
+		<exclude name="PHPCompatibility.PHP.NewConstants.t_spaceshipFound"/>
+		<exclude name="PHPCompatibility.PHP.NewConstants.t_coalesceFound"/>
+		<exclude name="PHPCompatibility.PHP.NewConstants.t_coalesce_equalFound"/>
+		<exclude name="PHPCompatibility.PHP.NewConstants.t_yield_fromFound"/>
+		<exclude name="PHPCompatibility.PHP.NewConstants.t_traitFound"/>
+	</rule>
+
+	<config name="minimum_wp_version" value="6.5"/>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="funky-headline"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>

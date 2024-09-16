@@ -1,0 +1,53 @@
+{
+    "name": "markonikolas/funky-headline",
+    "description": "A funky headline block with an eye-catching look :)",
+    "type": "project",
+    "license": "GPL-2.0-only",
+	"scripts": {
+		"lint": "phpcs",
+		"lint:fix": "phpcbf"
+	},
+    "authors": [
+        {
+            "name": "Marko Nikolaš",
+            "email": "36996299+markonikolas@users.noreply.github.com"
+        }
+    ],
+    "require-dev": {
+        "wordpress/wordpress": "6.6.2",
+		"squizlabs/php_codesniffer": "*",
+        "wp-coding-standards/wpcs": "^3.0",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "automattic/vipwpcs": "^3.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "package",
+            "package": [
+                {
+                    "name": "wordpress/wordpress",
+                    "version": "6.6.2",
+                    "source": {
+                        "url": "https://github.com/wordpress/wordpress",
+                        "type": "git",
+                        "reference": "00a39b7"
+                    }
+                }
+            ]
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "FunkyHeadline\\": "Inc/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

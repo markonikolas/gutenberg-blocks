@@ -1,0 +1,43 @@
+{
+  "extends": [
+    "plugin:@wordpress/eslint-plugin/recommended",
+    "plugin:import/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/prop-types": "warn",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "@wordpress/no-unused-vars-before-return": "off",
+    "@wordpress/no-global-active-element": "warn",
+    "@wordpress/no-unsafe-wp-apis": "warn",
+    "react/jsx-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "no-multi-spaces": "error",
+    "space-in-parens": [
+      "error",
+      "always"
+    ],
+    "array-bracket-spacing": [
+      "error",
+      "always"
+    ],
+    "computed-property-spacing": [
+      "error",
+      "always"
+    ],
+    "func-call-spacing": [
+      "error",
+      "never"
+    ]
+  }
+}
