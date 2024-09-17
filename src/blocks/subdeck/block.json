@@ -9,9 +9,11 @@
 	"description": "A Subdeck for Funky Headline Block.",
 	"example": {},
 	"supports": {
-		"html": false
+		"html": false,
+		"inserter": false
 	},
-	"textdomain": "subdeck",
+	"parent": "funky-headline/funky-headline",
+	"textdomain": "funky-headline",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",

@@ -9,12 +9,10 @@ namespace FunkyHeadline\Block;
 
 /**
  * BlockLoader class
- *
  * Responsible for loading blocks as they
  * are added in the blocks directory.
  */
 class BlockLoader {
-
 	/**
 	 * Holds block paths.
 	 *
@@ -58,13 +56,11 @@ class BlockLoader {
 	 * @return void
 	 */
 	public function load_blocks(): void {
-
 		foreach ( $this->blocks as $value ) {
 			$has_block_meta = array_search( 'block.json', array_diff( scandir( $value ), [ '.', '..' ] ), true );
 
-
 			if ( $has_block_meta ) {
-				register_block_type_from_metadata( $value . '/block.json' );
+				register_block_type( $value );
 			}
 		}
 	}

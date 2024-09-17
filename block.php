@@ -11,7 +11,7 @@
  * Text Domain:       funky-headline
  * Domain Path:       funky-headline
  *
- * @package funky-headline
+ * @package funky-headline1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
