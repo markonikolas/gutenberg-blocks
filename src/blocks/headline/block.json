@@ -2,15 +2,33 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "funky-headline/headline",
-	"version": "0.1.0",
+	"version": "0.0.1",
 	"title": "Funky Headline Main Headline",
 	"category": "text",
 	"icon": "flag",
 	"description": "A Headline for Funky Headline Block.",
-	"example": {},
+	"example": {
+		"headline": {
+			"type": "string",
+			"default": "Colorful Headlines Increase Reader Engagement by 400%"
+		}
+	},
 	"supports": {
 		"html": false,
-		"inserter": false
+		"inserter": false,
+		"spacing": {
+			"margin": true
+		},
+		"color": {
+			"text": true,
+			"background": false
+		}
+	},
+	"attributes": {
+		"headline": {
+			"type": "string",
+			"default": "Colorful Headlines Increase Reader Engagement by 400%"
+		}
 	},
 	"parent": "funky-headline/funky-headline",
 	"textdomain": "funky-headline",

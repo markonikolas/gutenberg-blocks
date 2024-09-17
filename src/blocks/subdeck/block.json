@@ -2,15 +2,34 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "funky-headline/subdeck",
-	"version": "0.1.0",
+	"version": "0.0.1",
 	"title": "Funky Headline Subdeck",
 	"category": "text",
 	"icon": "ellipsis",
 	"description": "A Subdeck for Funky Headline Block.",
-	"example": {},
+	"example": {
+		"subdeck": {
+			"type": "string",
+			"default": "Boffins at the University of Science discover the secrets of colorful headlines and how they hypnotize anyone who reads them."
+		},
+		"color": {
+			"type": "string",
+			"default": "#333"
+		}
+	},
 	"supports": {
 		"html": false,
-		"inserter": false
+		"inserter": false,
+		"color": {
+			"text": true,
+			"background": false
+		}
+	},
+	"attributes": {
+		"subdeck": {
+			"type": "string",
+			"default": "Boffins at the University of Science discover the secrets of colorful headlines and how they hypnotize anyone who reads them."
+		}
 	},
 	"parent": "funky-headline/funky-headline",
 	"textdomain": "funky-headline",
