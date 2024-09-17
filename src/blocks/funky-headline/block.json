@@ -1,18 +1,17 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "funky-headline/headline",
+	"name": "funky-headline/funky-headline",
 	"version": "0.1.0",
-	"title": "Funky Headline Main Headline",
+	"title": "Funky Headline",
 	"category": "text",
-	"icon": "flag",
-	"description": "A Headline for Funky Headline Block.",
+	"icon": "carrot",
+	"description": "A funky headline block with an eye-catching look :)",
 	"example": {},
 	"supports": {
-		"html": false,
-		"inserter": false
+		"html": false
+
 	},
-	"parent": "funky-headline/funky-headline",
 	"textdomain": "funky-headline",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
