@@ -2,15 +2,33 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "funky-headline/kicker",
-	"version": "0.1.0",
+	"version": "0.0.1",
 	"title": "Funky Headline Kicker",
 	"category": "text",
 	"icon": "image-filter",
 	"description": "A kicker for Funky Headline block.",
-	"example": {},
+	"example": {
+		"kicker": {
+			"type": "string",
+			"default": "Real Science"
+		}
+	},
+	"attributes": {
+		"kicker": {
+			"type": "string",
+			"default": "Real Science"
+		}
+	},
 	"supports": {
 		"html": false,
-		"inserter": false
+		"inserter": false,
+		"color": {
+			"text": true,
+			"background": true
+		},
+		"spacing": {
+			"padding": true
+		}
 	},
 	"parent": "funky-headline/funky-headline",
 	"textdomain": "funky-headline",

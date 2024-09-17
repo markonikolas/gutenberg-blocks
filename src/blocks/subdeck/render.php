@@ -1,8 +1,34 @@
 <?php
 /**
- * @see https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-metadata.md#render
+ * SSR of the Funky Headline Subdeck Block.
+ *
+ * @package funky-headline
  */
+
+/**
+ * Block content server-side rendered.
+ * Re sanitization it through `wp_kses_post` causes
+ * embed blocks to break and other core filters don't apply.
+ * therefore no additional sanitization is done and it is being output as is
+ *
+ * @var string $attributes - Block attributes.
+ */
+
+[
+	'subdeck' => $subdeck,
+] = $attributes;
+
+$block_attributes = get_block_wrapper_attributes();
+
 ?>
-<p <?php echo get_block_wrapper_attributes(); ?>>
-	<?php esc_html_e( 'Funky Headline Subdeck – hello from a dynamic block!', 'subdeck' ); ?>
-</p>
+
+<span
+	<?php
+	echo $block_attributes; // @phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	?>
+>
+	<?php
+	echo esc_html( $subdeck );
+	?>
+</span>
+

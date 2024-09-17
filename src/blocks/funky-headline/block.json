@@ -2,15 +2,18 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "funky-headline/funky-headline",
-	"version": "0.1.0",
+	"version": "0.0.1",
 	"title": "Funky Headline",
 	"category": "text",
 	"icon": "carrot",
 	"description": "A funky headline block with an eye-catching look :)",
 	"example": {},
 	"supports": {
-		"html": false
-
+		"html": false,
+		"spacing": {
+			"padding": true,
+			"margin": true
+		}
 	},
 	"textdomain": "funky-headline",
 	"editorScript": "file:./index.js",

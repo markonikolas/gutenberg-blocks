@@ -16,7 +16,7 @@ export default function Edit() {
 				[ 'funky-headline/headline' ],
 				[ 'funky-headline/subdeck' ],
 			],
-			templateLock: 'insert'
+			templateLock: 'all'
 		},
 	)
 

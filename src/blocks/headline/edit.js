@@ -1,11 +1,26 @@
+import PropTypes from 'prop-types';
+import { RichText, useBlockProps } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
-import { useBlockProps } from '@wordpress/block-editor';
 import './editor.scss';
 
-export default function Edit() {
+export default function Edit( { attributes, setAttributes } ) {
+	const { headline: text } = attributes;
+
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'Funky Headline Main Headline – hello from the editor!', 'headline' ) }
-		</p>
+		<RichText
+			{ ...useBlockProps() }
+			tagName="h1"
+			value={ text }
+			placeholder={ __( 'Headline…' ) }
+			onChange={ ( headline ) => setAttributes( { headline } ) }
+			allowedFormats={ [ 'core/bold', 'core/italic' ] }
+		/>
 	);
+}
+
+Edit.propTypes = {
+	setAttributes: PropTypes.func,
+	attributes: PropTypes.object,
+	headline: PropTypes.string,
+	textColor: PropTypes.string,
 }
